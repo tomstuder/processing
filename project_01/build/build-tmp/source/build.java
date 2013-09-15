@@ -43,7 +43,6 @@ for (int i = 0; i>1000; i--){
 }
 
 
-
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "build" };
