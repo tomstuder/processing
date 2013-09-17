@@ -14,21 +14,38 @@ import java.io.IOException;
 
 public class build extends PApplet {
 
-PImage img;
+PImage bg,one,two,three,four;
 
 public void setup(){
 size(600, 600);
-background(0xff939393);
+bg = loadImage("data/bg.jpg");
+image(bg, 0, 0, width, height);
 smooth();
 
-for (int i = 0; i<900; i++){
-img = loadImage("data/trans.png");
-image(img, random(-10, 600), random(-10, 600), 40, 40);
+for (int i = 0; i<250; i++){
+one = loadImage("data/trans.png");
+two = loadImage("data/red.png");
+three = loadImage("data/redblue.png");
+four = loadImage("data/bluex.png");
+image(one, random(-10, 600), random(-10, 600), 10, 10);
+image(two, random(-10, 600), random(-10, 600), 10, 10);
+image(three, random(-10, 600), random(-10, 600), 10,10);
+image(four, random(-10, 600), random(-10, 600), 20, 20);
+rotate(random(10, 180));
+image(four, random(-10, 600), random(-10, 600), 30, 30);
+// stroke(random(0, 255), random(10, 150));
+noStroke();
+fill(random(0, 20), random(0, 50));
+rect(random(0, 600), random(0, 600), random(20, 600), random(20, 600));
+  }
+
+  saveFrame("random_trans.png");
+
 }
 
 
-saveFrame("render/image.png");
-}
+
+
 
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "build" };
