@@ -1,8 +1,10 @@
-PImage pt1, pt2, pt3, pt4;
+
+PImage pt1, pt2, pt3;
 
 void setup(){
-size(800, 800);
-background(#E2E2E2);
+
+size(400,400);
+background(#5c5c5c);
 
 // tint(10, 0, 50, 255);
 pt1 = loadImage("pt1.png");
@@ -29,7 +31,7 @@ smooth();
 
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noFill();
 	strokeWeight(1);
 	stroke(200,200,200);
@@ -37,23 +39,33 @@ smooth();
 	popMatrix();
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noStroke();
 	fill(150, 150, 150);
 	ellipse(0, 0, 228, 228);
 	popMatrix();
 
 
-		for (int i = 0; i<32; i++){
+		for (int i = 0; i<18; i++){
 		pushMatrix();
-		translate(400, 400);
+	translate(200, 200);
+	tint(#3b3b3b,100);
+		rotate(radians(i * 20));
+		image(pt1, 0, 0, 120, 120);
+		popMatrix();
+		}
+
+				for (int i = 0; i<32; i++){
+		pushMatrix();
+	translate(200, 200);
+	noTint();
 		rotate(radians(i * 20));
 		image(pt1, 0, 0, 100, 100);
 		popMatrix();
 		}
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noFill();
 	stroke(200,200,200);
 	strokeWeight(2);
@@ -62,7 +74,7 @@ smooth();
 
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noFill();
 	stroke(200,200,200);
 	strokeWeight(1);
@@ -70,7 +82,7 @@ smooth();
 	popMatrix();
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noFill();
 	stroke(200,200,200);
 	strokeWeight(1);
@@ -79,7 +91,7 @@ smooth();
 
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noStroke();
 	fill(150, 150, 150);
 	ellipse(0, 0, 120, 120);
@@ -87,8 +99,9 @@ smooth();
 
 		for (int i = 0; i<11; i++){
 		pushMatrix();
-		translate(400, 400);
+	translate(200, 200);
 		rotate(i * 20);
+	noTint();
 		image(pt2, 0, 0, 50, 50);
 		popMatrix();
 
@@ -96,20 +109,24 @@ smooth();
 
 		for (int i = 0; i<18; i++){
 		pushMatrix();
-		translate(400, 400);
+	translate(200, 200);
 		rotate(radians(i * 20));
 		image(pt3, 0, 0, 100, 100);
 		popMatrix();
 		}
 
+// stroke("pt3.png");
+// ellipse(400, 400, 400, 400);
 
 
 	pushMatrix();
-	translate(400, 400);
+translate(200, 200);
 	noStroke();
 	fill(100,100,100);
 	ellipse(0, 0, 20, 20);
 	popMatrix();
+
+saveFrame("rotatePat.png");
 
 
 }
