@@ -21,3 +21,4 @@ void draw(){
 
 // Comments
 // Consider join()
+// Integer.parseInt(string); 
