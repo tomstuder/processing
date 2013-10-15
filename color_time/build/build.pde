@@ -3,7 +3,7 @@ int m = minute();
 int h = hour();
 
 String now = "time:"+ h + m + s;
-int now1 = h "+" m "+" s;
+// int now1 = h "+" m "+" s;
 
 
 void setup(){

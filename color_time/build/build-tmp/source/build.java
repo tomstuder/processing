@@ -14,11 +14,13 @@ import java.io.IOException;
 
 public class build extends PApplet {
 
-int s = seconds();
+int s = second();
 int m = minute();
 int h = hour();
 
 String now = "time:"+ h + m + s;
+// int now1 = h "+" m "+" s;
+
 
 public void setup(){
 
@@ -32,6 +34,9 @@ public void draw(){
 
 
 }
+
+// Comments
+// Consider join()
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "build" };
     if (passedArgs != null) {
