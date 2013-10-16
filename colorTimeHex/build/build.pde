@@ -16,7 +16,7 @@ String t = "" + h + m + s;
 int n = PApplet.parseInt(t);	
 
 background(n); // uses parsed string as color value
-
+println(n);
 }
 
 // issues: if time is 12:03:05, the int value will appear as 1235
