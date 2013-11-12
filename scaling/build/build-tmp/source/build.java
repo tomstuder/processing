@@ -26,8 +26,8 @@ rectMode(CENTER);
 public void draw(){
 background(200,50,0);
 
-for (int y = 0; y<= height; y=y+20){
-  for (int x = 0; x<= width; x=x+20){
+for (int y = 0; y<= height; y=y+10){
+  for (int x = 0; x<= width; x=x+10){
 
 	// strokeWeight(1);
 	fill(255,25,0);

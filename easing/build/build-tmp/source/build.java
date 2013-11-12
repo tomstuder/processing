@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class build extends PApplet {
 
+// Adaptation of Tutorial from "Getting Started With Processing" by Casey Reas
 
 float x;
 float easingX = 0.01f;
